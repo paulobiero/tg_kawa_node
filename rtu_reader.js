@@ -13,7 +13,7 @@ const MBS_STATE_GOOD_CONNECT  = "State good (port)";
 const MBS_STATE_FAIL_CONNECT  = "State fail (port)";
 
 // Modbus configuration values
-const mbsId       = 2;
+const mbsId       = 244;
 const mbsScan     = 1000;
 const mbsTimeout  = 5000;
 let mbsState    = MBS_STATE_INIT;
