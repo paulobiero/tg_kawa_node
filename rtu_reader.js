@@ -32,7 +32,7 @@ const connectClient = function()
     client.setTimeout (mbsTimeout);
 
     // try to connect
-    client.connectRTUBuffered ("/dev/serial0", { baudRate: 9600, parity: "even", dataBits: 8, stopBits: 1 })
+    client.connectRTUBuffered ("/dev/serial10", { baudRate: 9600, parity: "even", dataBits: 8, stopBits: 1 })
         .then(function()
         {
             mbsState  = MBS_STATE_GOOD_CONNECT;
