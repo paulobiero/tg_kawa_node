@@ -13,7 +13,7 @@ const MBS_STATE_GOOD_CONNECT  = "State good (port)";
 const MBS_STATE_FAIL_CONNECT  = "State fail (port)";
 
 // Modbus configuration values
-const mbsId       = 1;
+const mbsId       = 2;
 const mbsScan     = 1000;
 const mbsTimeout  = 5000;
 let mbsState    = MBS_STATE_INIT;
@@ -32,7 +32,7 @@ const connectClient = function()
     client.setTimeout (mbsTimeout);
 
     // try to connect
-    client.connectRTUBuffered ("/dev/serial0", { baudRate: 9600, parity: "even", dataBits: 8, stopBits: 1 })
+    client.connectRTUBuffered ("/dev/serial10", { baudRate: 9600, parity: "even", dataBits: 8, stopBits: 1 })
         .then(function()
         {
             mbsState  = MBS_STATE_GOOD_CONNECT;
@@ -47,7 +47,7 @@ const connectClient = function()
         });
 };
 
-
+//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
 //==============================================================
 const readModbusData = function()
 {
