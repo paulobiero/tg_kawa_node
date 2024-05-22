@@ -52,7 +52,7 @@ const connectClient = function()
 const readModbusData = function()
 {
     // try to read data
-    client.readHoldingRegisters(313, 1)
+    client.readHoldingRegisters(304, 1)
         .then(function(data)
         {
             mbsState   = MBS_STATE_GOOD_READ;
