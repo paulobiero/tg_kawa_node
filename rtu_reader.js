@@ -32,7 +32,7 @@ const connectClient = function()
     client.setTimeout (mbsTimeout);
 
     // try to connect
-    client.connectRTUBuffered ("/dev/ttyUSB0", { baudRate: 9600, parity: "even", dataBits: 8, stopBits: 1 })
+    client.connectRTUBuffered("/dev/ttyUSB0", { baudRate: 9600, parity: "even", dataBits: 8, stopBits: 1 })
         .then(function()
         {
             mbsState  = MBS_STATE_GOOD_CONNECT;
@@ -52,7 +52,7 @@ const connectClient = function()
 const readModbusData = function()
 {
     // try to read data
-    client.readHoldingRegisters (0, 2)
+    client.readHoldingRegisters(321, 1)
         .then(function(data)
         {
             mbsState   = MBS_STATE_GOOD_READ;
